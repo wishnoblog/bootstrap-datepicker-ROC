@@ -10,7 +10,13 @@ https://bootstrap-datepicker.readthedocs.io/en/latest/
 `"108-01-01"`
 
 ## 線上預覽
-https://jsfiddle.net/wishnoblog/hnoLqak0/43/
+
+![Imgur](https://i.imgur.com/P9aKJHD.png)
+![Imgur](https://i.imgur.com/wj4pCFX.png)
+
+https://jsfiddle.net/wishnoblog/hnoLqak0/74/
+
+
 
 ## 使用方法
 
