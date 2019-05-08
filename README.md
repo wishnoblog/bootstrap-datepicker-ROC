@@ -31,6 +31,7 @@ js
     $('.datepicker').datepicker(
     {
       language: 'zh-TW',
+      maxViewModel:1,
       autoclose: true,
     });
     
