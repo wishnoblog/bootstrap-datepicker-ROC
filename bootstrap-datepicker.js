@@ -904,9 +904,9 @@
 			var view = this.picker.find(selector);
 			var startVal = Math.floor(year / factor) * factor;
 			var endVal = startVal + step * 9;
-			var focusedVal = Math.floor(this.viewDate.getFullYear() / step) * step;
+			var focusedVal = Math.floor(this.viewDate.getFullYear() / step) * step ;
 			var selected = $.map(this.dates, function(d){
-				return Math.floor(d.getUTCFullYear() / step) * step;
+				return Math.floor(d.getUTCFullYear() / step) * step ;
 			});
 
 			var classes, tooltip, before;
@@ -949,16 +949,16 @@
 					}
 				}
 
-				html += '<span class="' + classes.join(' ') + '"' + (tooltip ? ' title="' + tooltip + '"' : '') + '>' + currVal + '</span>';
+				html += '<span class="' + classes.join(' ') + '"' + (tooltip ? ' title="' + tooltip + '"' : '') + '>' + (currVal-1911) + '</span>';
 			}
 
-			view.find('.datepicker-switch').text(startVal + '-' + endVal);
+			view.find('.datepicker-switch').text("民國"+(startVal-1911) + '年-' + (endVal-1911)+'年');
 			view.find('td').html(html);
 		},
 
 		fill: function(){
 			var d = new Date(this.viewDate),
-				year = d.getUTCFullYear(),
+				year = d.getUTCFullYear() ,
 				month = d.getUTCMonth(),
 				startYear = this.o.startDate !== -Infinity ? this.o.startDate.getUTCFullYear() : -Infinity,
 				startMonth = this.o.startDate !== -Infinity ? this.o.startDate.getUTCMonth() : -Infinity,
@@ -1057,7 +1057,7 @@
 			var monthsTitle = dates[this.o.language].monthsTitle || dates['en'].monthsTitle || 'Months';
 			var months = this.picker.find('.datepicker-months')
 						.find('.datepicker-switch')
-							.text(this.o.maxViewMode < 2 ? monthsTitle : year)
+							.text("民國" + (this.o.maxViewMode < 2 ? monthsTitle : year-1911) + "年")
 							.end()
 						.find('tbody span').removeClass('active');
 
@@ -1206,7 +1206,7 @@
 						this.viewDate.setUTCMonth(month);
 					} else {
 						month = 0;
-						year = Number(target.text());
+						year = Number(target.text())+1911;
 						this.viewDate.setUTCFullYear(year);
 					}
 
@@ -1743,9 +1743,9 @@
             monthsShort:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
             today:"今天",
             format:"yyyy-mm-dd",
-            weekStart:1,
+            weekStart:0,
             clear:"清除",
-            titleFormat: "yyyy年 MM"
+            titleFormat: "民國 yyyy年 MM"
         }
     };
 
