@@ -7,7 +7,9 @@ bootstrap-datepicker 民國年度版本
 https://bootstrap-datepicker.readthedocs.io/en/latest/
 
 輸出入格式為
-`"108-01-01"`
+`108-01-01`
+，或是
+`108-01`
 
 ## 線上預覽
 
