@@ -38,5 +38,15 @@ js
     });
     
     
+如果你想改成只顯示108-01
+
+    $('.datepicker').datepicker(
+    {
+      format: 'yyyy-mm',    
+      minViewModel:1,
+      language: 'zh-TW',
+      maxViewModel:1,
+      autoclose: true,
+    });
     
     
